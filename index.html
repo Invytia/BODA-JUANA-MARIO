@@ -55,7 +55,7 @@
             left: 0; 
             width: 100%; 
             height: 100vh;
-            background-color: var(--dark-green); /* Fondo oscuro para que resalte el sobre blanco */
+            background-color: var(--dark-green);
             background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
             z-index: 9999;
             display: flex;
@@ -253,14 +253,6 @@
         
         .btn:hover { background-color: var(--dark-green); }
 
-        .elegant-box {
-            width: 100%; padding: 30px 20px;
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(168, 149, 97, 0.4);
-            border-radius: 4px; margin-top: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
-
         /* GLASSMORPHISM */
         .glass-panel {
             width: 100%;
@@ -275,22 +267,21 @@
         }
 
         /* ==========================================================================
-           COLUMNA 1 (Intro, Nombres, Padres, Fecha)
+           COLUMNA 1 (Hero Novios, Intro, Padres, Fecha)
            ========================================================================== */
-        .intro-text { font-family: var(--font-sans); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; color: var(--dark-green); font-weight: 500;}
         
-        /* Estilos sin fotos: Mayor énfasis tipográfico */
-        .parents-section { margin: 15px 0 35px 0; }
-        .parents-title { font-family: var(--font-script); font-size: 2.2rem; color: var(--gold); margin-bottom: 10px; }
-        .parents-names { font-family: var(--font-sans); font-size: 0.85rem; letter-spacing: 1.5px; line-height: 1.8; color: var(--dark-green); text-transform: uppercase; }
-
-        .names-title { font-size: 2.5rem; line-height: 1.2; margin-bottom: 25px; color: var(--dark-green); }
+        .names-title { font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px; color: var(--dark-green); margin-top: 10px; }
         .names-title span { font-family: var(--font-script); font-size: 2.8rem; display: block; margin: 10px 0; color: var(--gold); text-transform: lowercase; }
         
-        .invite-text { font-family: var(--font-sans); font-size: 0.9rem; letter-spacing: 2px; margin-top: 30px; font-weight: 500; }
-        .invite-boda { font-family: var(--font-script); font-size: 3.8rem; margin-bottom: 30px; color: var(--olive-green); }
+        .invite-text { font-family: var(--font-sans); font-size: 0.9rem; letter-spacing: 2px; margin-top: 20px; font-weight: 500; }
+        .invite-boda { font-family: var(--font-script); font-size: 3.8rem; margin-bottom: 10px; color: var(--olive-green); }
 
-        .save-date-title { font-family: var(--font-sans); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 5px; margin-top: 35px; }
+        .intro-text { font-family: var(--font-sans); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; margin-bottom: 15px; color: var(--dark-green); font-weight: 500;}
+        
+        .parents-section { margin: 15px 0 35px 0; }
+        .parents-names { font-family: var(--font-sans); font-size: 0.85rem; letter-spacing: 1.5px; line-height: 1.8; color: var(--dark-green); text-transform: uppercase; }
+
+        .save-date-title { font-family: var(--font-sans); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 5px; margin-top: 20px; }
         .save-date-date { font-family: var(--font-title); font-size: 3.2rem; color: var(--dark-green); margin-bottom: 5px; }
 
         /* Calendario Octubre 2026 */
@@ -302,11 +293,11 @@
         .calendar-day.highlight { background-color: var(--dark-green); color: var(--cream); border-radius: 50%; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
 
         #countdown-timer {
-            font-family: var(--font-sans); font-size: 0.9rem; letter-spacing: 2px;
+            font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 1px;
             color: var(--dark-green); font-weight: 600;
             margin: 35px 0; padding: 20px 0; width: 100%;
             border-top: 1px solid rgba(168,149,97,0.4); border-bottom: 1px solid rgba(168,149,97,0.4);
-            display: flex; justify-content: center; gap: 20px;
+            display: flex; justify-content: space-around; white-space: nowrap;
         }
 
         .dark-block {
@@ -319,21 +310,10 @@
         /* ==========================================================================
            COLUMNA 2 (Programa, Vestimenta)
            ========================================================================== */
-        /* Ornamento superior floral/abstracto para compensar falta de fotos */
-        .floral-decor { 
-            width: 100%; 
-            height: 180px; 
-            background-color: var(--olive-green);
-            background-image: url('https://www.transparenttextures.com/patterns/floral-texture.png'); 
-            border-radius: 8px; 
-            margin-bottom: 35px; 
-            opacity: 0.85;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-        }
-
+        
         /* Timeline / Programa */
         .timeline-section { 
-            width: 100%; padding: 10px; position: relative; margin-top: 20px;
+            width: 100%; padding: 10px; position: relative; margin-top: 10px;
         }
         .timeline-section::before { 
             content: ''; position: absolute; 
@@ -427,10 +407,16 @@
     <div id="invitation-content">
         <div class="invitation-container">
             
-            <!-- ================= COLUMNA 1: NOMBRES Y FECHA ================= -->
+            <!-- ================= COLUMNA 1: HERO, PADRES Y FECHA ================= -->
             <div class="column">
-                <p class="intro-text fade-in">Con la bendición de nuestros padres</p>
+                
+                <h1 class="names-title fade-in">JUANA DE JESÚS<span>y</span>MARIO DAVID</h1>
+                <p class="invite-text fade-in">TENEMOS EL HONOR DE INVITARTE A NUESTRA</p>
+                <div class="invite-boda fade-in">Boda Civil</div>
+
                 <div class="divider fade-in"><i class="fa-solid fa-heart" style="font-size: 0.7rem;"></i></div>
+
+                <p class="intro-text fade-in">Con la bendición de nuestros padres</p>
                 
                 <div class="parents-section fade-in">
                     <p class="parents-names">
@@ -440,13 +426,6 @@
                         Delfino Baltierra García
                     </p>
                 </div>
-
-                <div class="divider fade-in"><i class="fa-solid fa-leaf" style="font-size: 0.7rem;"></i></div>
-                
-                <p class="invite-text fade-in">TENEMOS EL HONOR DE INVITARTE A NUESTRA</p>
-                <div class="invite-boda fade-in">Boda Civil</div>
-                
-                <h1 class="names-title fade-in">JUANA DE JESÚS<span>y</span>MARIO DAVID</h1>
 
                 <div class="save-date fade-in">
                     <p class="save-date-title">RESERVA LA FECHA</p>
@@ -474,6 +453,7 @@
                     <span><b id="dias">00</b> DÍAS</span>
                     <span><b id="horas">00</b> HRS</span>
                     <span><b id="minutos">00</b> MIN</span>
+                    <span><b id="segundos">00</b> SEG</span>
                 </div>
 
                 <button onclick="downloadICS()" class="btn fade-in" style="width: 80%;"><i class="fa-regular fa-calendar-plus"></i> AGREGAR AL CALENDARIO</button>
@@ -481,7 +461,6 @@
 
             <!-- ================= COLUMNA 2: PROGRAMA Y VESTIMENTA ================= -->
             <div class="column">
-                <div class="floral-decor fade-in"></div>
                 
                 <h2 class="fade-in" style="font-size: 2.2rem; margin-bottom: 5px; letter-spacing: 2px;">ITINERARIO</h2>
                 <div class="divider fade-in"><i class="fa-solid fa-clock" style="font-size: 0.7rem;"></i></div>
@@ -666,7 +645,7 @@
         }
 
         // --- 2. WHATSAPP (NÚMERO ASIGNADO) ---
-        const telefonoWhatsApp = "527712189353"; // Con código de país 52 para México
+        const telefonoWhatsApp = "527712189353";
 
         // --- 3. INICIALIZACIÓN ---
         document.addEventListener("DOMContentLoaded", function() {
@@ -728,10 +707,12 @@
                 const d = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((distance % (1000 * 60)) / 1000);
 
                 document.getElementById("dias").innerHTML = d < 10 ? "0" + d : d;
                 document.getElementById("horas").innerHTML = h < 10 ? "0" + h : h;
                 document.getElementById("minutos").innerHTML = m < 10 ? "0" + m : m;
+                document.getElementById("segundos").innerHTML = s < 10 ? "0" + s : s;
             }, 1000);
         });
 
@@ -791,7 +772,6 @@
 
         // --- 6. DESCARGAR ICS ---
         function downloadICS() {
-            // Formato ICS - Empieza 13:00 CST (Aprox 19:00 UTC) y termina 22:00 CST
             const calData = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Boda Juana y Mario//ES\nBEGIN:VEVENT\nDTSTART:20261010T190000Z\nDTEND:20261011T040000Z\nSUMMARY:Boda Civil de Juana y Mario\nLOCATION:Lotus Grill Experience\nDESCRIPTION:¡Acompáñanos a celebrar nuestra boda civil!\nEND:VEVENT\nEND:VCALENDAR`;
             const blob = new Blob([calData], { type: 'text/calendar;charset=utf-8' });
             const url = URL.createObjectURL(blob);
