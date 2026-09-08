@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda Civil de Juana y Mario - 2026</title>
+    <title>Boda Civil de Mario y Juana - 2026</title>
     
     <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -304,7 +304,7 @@
         <div class="envelope-wrapper" onclick="openInvitation()">
             <div class="envelope-front"></div>
             <div class="envelope-flap">
-                <div class="seal">J&M</div>
+                <div class="seal glowing-icon">M&J</div>
             </div>
             <div class="envelope-body"></div>
         </div>
@@ -335,9 +335,9 @@
                 <div class="invite-boda fade-in scale-in">Boda Civil</div>
 
                 <h1 class="names-title fade-in shimmer-text">
-                    JUANA DE JESÚS
-                    <span>y</span>
-                    MARIO DAVID
+                    MARIO BALTIERRA
+                    <span>&amp;</span>
+                    JUANA VALDEZ
                 </h1>
 
                 <div class="divider fade-in"><i class="fa-solid fa-heart glowing-icon" style="font-size: 0.8rem;"></i></div>
@@ -394,7 +394,7 @@
                     <div class="timeline-item fade-in">
                         <div class="timeline-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
                         <div class="timeline-content">
-                            <div class="timeline-time">1:00 PM</div>
+                            <div class="timeline-time">2:30 PM</div>
                             <div class="timeline-event">Recepción</div>
                         </div>
                     </div>
@@ -417,13 +417,6 @@
                         <div class="timeline-content">
                             <div class="timeline-time">4:30 PM</div>
                             <div class="timeline-event">Banquete</div>
-                        </div>
-                    </div>
-                    <div class="timeline-item fade-in">
-                        <div class="timeline-icon"><i class="fa-solid fa-moon"></i></div>
-                        <div class="timeline-content">
-                            <div class="timeline-time">10:00 PM</div>
-                            <div class="timeline-event">Concluye el evento</div>
                         </div>
                     </div>
                 </div>
@@ -514,7 +507,7 @@
                 <div class="dark-block fade-in scale-in" style="margin-top: 60px; text-align: center;">
                     <h3 class="shimmer-text" style="font-family: var(--font-script); font-size: 4.5rem; margin-bottom: 15px; background-image: linear-gradient(90deg, var(--gold) 0%, #fff 30%, var(--cream) 50%, #fff 70%, var(--gold) 100%);">¡Gracias!</h3>
                     <p style="font-size: 1.15rem; margin-bottom: 30px; font-style: italic; color: var(--cream);">Tu presencia hará de este día un momento inolvidable.</p>
-                    <div style="font-family: var(--font-sans); letter-spacing: 5px; font-size: 1rem; text-transform: uppercase; color: var(--gold); font-weight: 600;">Juana & Mario</div>
+                    <div style="font-family: var(--font-sans); letter-spacing: 5px; font-size: 1rem; text-transform: uppercase; color: var(--gold); font-weight: 600;">Mario & Juana</div>
                 </div>
             </div>
 
@@ -616,8 +609,8 @@
                 document.getElementById('genericRSVPInputs').style.display = 'none';
             }
 
-            // Cuenta Regresiva: 10 de Octubre de 2026, 13:00 hrs
-            const countDownDate = new Date("Oct 10, 2026 13:00:00").getTime();
+            // Cuenta Regresiva: 10 de Octubre de 2026, 14:30 hrs
+            const countDownDate = new Date("Oct 10, 2026 14:30:00").getTime();
             const x = setInterval(function() {
                 const now = new Date().getTime();
                 const distance = countDownDate - now;
@@ -677,7 +670,7 @@
                     return; 
                 }
                 
-                mensaje = `Hola Juana y Mario, soy *${nombre} ${apellido}*.\n\nQuiero confirmar mi respuesta a su boda: *${asistencia}*\n\n`;
+                mensaje = `Hola Mario y Juana, soy *${nombre} ${apellido}*.\n\nQuiero confirmar mi respuesta a su boda: *${asistencia}*\n\n`;
             }
 
             window.open(`https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensaje)}`, '_blank');
@@ -690,18 +683,18 @@
                 alert("Por favor, escribe un mensaje primero."); 
                 return; 
             }
-            let mensaje = `¡Hola Juana y Mario! Les escribo para dejarles mis mejores deseos para su boda:\n\n"${wishes}"`;
+            let mensaje = `¡Hola Mario y Juana! Les escribo para dejarles mis mejores deseos para su boda:\n\n"${wishes}"`;
             window.open(`https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensaje)}`, '_blank');
         }
 
         // --- 6. DESCARGAR ICS ---
         function downloadICS() {
-            const calData = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Boda Juana y Mario//ES\nBEGIN:VEVENT\nDTSTART:20261010T190000Z\nDTEND:20261011T040000Z\nSUMMARY:Boda Civil de Juana y Mario\nLOCATION:Lotus Grill Experience\nDESCRIPTION:¡Acompáñanos a celebrar nuestra boda civil!\nEND:VEVENT\nEND:VCALENDAR`;
+            const calData = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Boda Mario y Juana//ES\nBEGIN:VEVENT\nDTSTART:20261010T203000Z\nDTEND:20261011T040000Z\nSUMMARY:Boda Civil de Mario y Juana\nLOCATION:Lotus Grill Experience\nDESCRIPTION:¡Acompáñanos a celebrar nuestra boda civil!\nEND:VEVENT\nEND:VCALENDAR`;
             const blob = new Blob([calData], { type: 'text/calendar;charset=utf-8' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a'); 
             a.href = url;
-            a.download = 'Boda_Juana_y_Mario.ics'; 
+            a.download = 'Boda_Mario_y_Juana.ics'; 
             document.body.appendChild(a); 
             a.click(); 
             document.body.removeChild(a);
